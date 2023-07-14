@@ -21,7 +21,7 @@ public class FanController {
     @GetMapping
     public Page<Fan> getAll(@RequestParam(required = false) String key , Pageable  pageable){
         if(key ==null) key = "";
-        return fanService.getAll(pageable);
+        return fanService.findAllByNomContainsIgnoreCaseOrId(key , pageable);
     }
 
     @PostMapping
