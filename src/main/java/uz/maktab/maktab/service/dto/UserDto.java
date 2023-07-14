@@ -1,18 +1,11 @@
 package uz.maktab.maktab.service.dto;
-
 import uz.maktab.maktab.entity.Lavozim;
 
 import java.util.Set;
-
 public class UserDto {
-
-
-
-
     private  Long id;
     private  String ism;
     private  String familiya;
-
     private  String login;
     private Set<Lavozim> lavozims;
 

@@ -19,7 +19,8 @@ public class FanController {
 
 
     @GetMapping
-    public Page<Fan> getAll(@RequestParam(required = false)Pageable  pageable){
+    public Page<Fan> getAll(@RequestParam(required = false) String key , Pageable  pageable){
+        if(key ==null) key = "";
         return fanService.getAll(pageable);
     }
 

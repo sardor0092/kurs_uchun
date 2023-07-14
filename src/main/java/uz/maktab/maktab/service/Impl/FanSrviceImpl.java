@@ -47,4 +47,16 @@ public class FanSrviceImpl implements FanService {
         fanRepoaitory.deleteById(id);
 
     }
+
+    @Override
+    public Page<Fan> findAllByNomContainsIgnoreCaseOrId(String key, Pageable pageable) {
+        try {
+            Long n=Long.parseLong(key);
+            int i=Integer.parseInt(key);
+            return  fanRepoaitory.findAllByNomContainsIgnoreCaseOrId(key ,n ,pageable);
+        }
+        catch (Exception f){
+            return fanRepoaitory.findAllByNomContainsIgnoreCaseOrId(key,(long) -1, pageable);
+        }
+    }
 }

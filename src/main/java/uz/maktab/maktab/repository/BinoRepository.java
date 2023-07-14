@@ -6,4 +6,9 @@ import uz.maktab.maktab.entity.Bino;
 
 @Repository
 public interface BinoRepository extends JpaRepository<Bino , Long> {
+
+
+
+
+
 }
